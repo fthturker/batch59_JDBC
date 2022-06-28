@@ -65,7 +65,7 @@ public class HMC_DBUtils_stepdefinitions {
     public void thotelTablosundaIDHotelDegeriOlanKaydinEmailBilgisiniYapar(int idHotel, String yeniEmail) {
 
         String updateQuery="UPDATE tHOTEL SET Email = '"+yeniEmail+"' WHERE IDHotel="+idHotel+";";
-
+        DBUtils.executeQuery(updateQuery);
 
 
     }
