@@ -2,7 +2,7 @@ package stepdefinitions;
 import io.cucumber.java.en.Given;
 import java.sql.*;
 public class HMC_db_Stepdefinitions {
-
+    // ilk once data base baglanabilmek icin bulutta benim db nerede oldugunu sistem yoneticimden benim almam lazim
     String url="jdbc:sqlserver://184.168.194.58:1433;databaseName=hotelmycamp ; " +
             "user=techproed;password=P2s@rt65";
     String username="techproed";
@@ -23,7 +23,7 @@ public class HMC_db_Stepdefinitions {
     @Given("kullanici {string} tablosundaki {string} verilerini alir")
     public void kullanici_tablosundaki_verilerini_alir(String table, String field) throws SQLException {
         // olusturdugumuz ve deger atadigimiz statement objesini kullanarak sorgumuzu yaziyoruz
-                     // SELECT Price FROM tHOTELROOM
+                     // SELECT Price FROM tHOTELROOM bunu dinamik yapmak icin asagidaki ni yaziyoruz
         String query = "SELECT "+field+" FROM "+ table;
         resultSet = statement.executeQuery(query);
     }
