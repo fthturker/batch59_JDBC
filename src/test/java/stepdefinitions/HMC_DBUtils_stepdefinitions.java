@@ -37,7 +37,7 @@ public class HMC_DBUtils_stepdefinitions {
         // 1. ders de while loop ile next() kullanarak liste yazdirmistik
         // simdi de for loop ile liste yazdiralim
 
-        DBUtils.getResultset().last();
+        DBUtils.getResultset().last(); // sonuncu indeksi bulmak icin
         int sonSatirNo = DBUtils.getResultset().getRow();
         DBUtils.getResultset().first();
 
@@ -46,7 +46,6 @@ public class HMC_DBUtils_stepdefinitions {
             System.out.println(i + ". kayit " + DBUtils.getResultset().getString(field));
             DBUtils.getResultset().next();
         }
-
     }
 
     @Then("DBUtills ile {int}. {string} in {int} oldugunu test eder")
